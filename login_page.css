@@ -55,3 +55,10 @@ body {
     border-radius: 200px;
     border: 30px solid #e2c5e2;
 }
+.design .pill-3 {
+    top: -100px;
+    left: 160px;
+    position: absolute;
+    height: 200px;
+    width: 100px;
+}
