@@ -19,3 +19,10 @@ let totalTime = document.querySelector(".total-time");
 let trackIndex = 0;
 let isPlaying = false;
 let isRandom = false;
+const music_list=[
+  {
+    img:"download-1.jpg",
+    name:"the last ride",
+    artist: "sidhu moosewala",
+    music: "The Last Ride - DjPunjab.Com.se.mp3", 
+  },
