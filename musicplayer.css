@@ -15,4 +15,16 @@ body {
 	border-radius: 10px;
 	background: #19233b;
 }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #141927;
+  }
+  
+.music-player-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
 
