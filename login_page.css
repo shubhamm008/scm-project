@@ -61,4 +61,6 @@ body {
     position: absolute;
     height: 200px;
     width: 100px;
+    background: linear-gradient(#ff966d, #fa538d, #89379c);
+    border-radius: 70px;
 }
