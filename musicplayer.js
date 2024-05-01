@@ -50,5 +50,17 @@ const music_list=[
     artist:"travis scott",
     music:"Butterfly-Effect(PaglaWorld.Social).mp3",
   },
+  {
+    img:"chitta.jpg",
+    name:"chitta kurta",
+    artist:"karan aujla",
+    music:"Chitta Kurta - Karan Ajula 128 Kbps.mp3",
+  },
+  {
+    img:"wasted.jpg",
+    name:"wasted",
+    artist:"don toLiver",
+    music:"Don_Toliver_wasted_(thinknews.com.ng).mp3",
+  },
   
   
