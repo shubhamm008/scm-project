@@ -62,5 +62,32 @@ const music_list=[
     artist:"don toLiver",
     music:"Don_Toliver_wasted_(thinknews.com.ng).mp3",
   },
+  {
+    img:"cheqies.jpg",
+    name:"cheques",
+    artist:"shubh",
+    music:"Cheues_64(PagalaWorld.com.se).mp3",
+  },
+  {
+    img:"malang.jpg",
+    name:"malang sajna",
+    artist:"sachit tandon",
+    music:"Malang Sajna_64(PagalWorld.com.se).mp3",
+  },
+  {
+    img: "rattan.jpg",
+    name:"rattan lambiyan",
+    artist:"jubin nautiyal",
+    music:"Rattan Lambiyan_64(PagalWorld.com.se).mp3",
+  },
+  {
+    img:"maan.jpg",
+    name:"maan meri jaan",
+    artist:"king",
+    music:"Maan Meri Jaan_64(pagalworld.com.se).mp3",
+  },
+  
+  };
+  
   // basic songs list updated....
   
