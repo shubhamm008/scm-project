@@ -64,3 +64,9 @@ body {
     background: linear-gradient(#ff966d, #fa538d, #89379c);
     border-radius: 70px;
 }
+.design .pill-4 {
+    bottom: -180px;
+    left: 220px;
+    position: absolute;
+    height: 300px;
+}
