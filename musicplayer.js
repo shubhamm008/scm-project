@@ -88,6 +88,17 @@ const music_list=[
   },
   
   };
+loadTrack(trackIndex)
+{
+  reset();
+  audio.src=muzic_list(trackIndex).music;
+  audio.load();
+  trackArt.style.backgroundImage ="url("+ music_list[trackIndex].imh+")";
+  trackName.textContent = music_list[trackIndex].name;
+  trackArtist.textContent= music_list[trackIndex].artist;
+  audio.addEventListner("ended", nextTrck);
+  rangdom_bg_color();
+}
   
   // basic songs list updated....
   
