@@ -60,4 +60,20 @@ body {
     background-position: center;
     
 }
+}
+  .now-playing {
+    font-size: 1rem;
+  }
+  
+  .music-info{
+    text-align: center;
+    top: 45%;
+    right: 0;
+    width: 100%;
+    padding: .25rem 0 0 0;
+    opacity: 1;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: 0;
+  }
 
