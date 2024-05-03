@@ -99,6 +99,27 @@ loadTrack(trackIndex)
   audio.addEventListner("ended", nextTrck);
   rangdom_bg_color();
 }
+function random_bg_color()
+{
+  let hex=
+[
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+];
+let a;
   
   // basic songs list updated....
   
