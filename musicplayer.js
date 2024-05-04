@@ -120,6 +120,19 @@ function random_bg_color()
     "e",
 ];
 let a;
+function populate(a)
+  {
+    for(let i= 0; i < 6; i++)
+      {
+        let x = Math.round(Math.random() * 14);
+        let y = hx[x];
+        a +=y;
+      }
+    return a;
+  }
+  let Color1 = populate("#");
+  let Color2 = populate("#");
+  var angle = "to bottom right";
   
   // basic songs list updated....
   
