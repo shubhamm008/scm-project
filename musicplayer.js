@@ -133,6 +133,13 @@ function populate(a)
   let Color1 = populate("#");
   let Color2 = populate("#");
   var angle = "to bottom right";
+
+  let gradient = "linear-gradient(" + angle + "," +Color1 + "," + Color2 +")";
+  document.body.style.background = gradient;
+  volumeSlider.style.setProperty("--background", Color2)
+  timelineContainer.style.setProperty("--background", Color2)
+  musicInfo.style.setProperty("--background", gradient)
+}
   
   // basic songs list updated....
   
