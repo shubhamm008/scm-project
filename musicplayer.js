@@ -86,7 +86,7 @@ const music_list=[
     artist:"king",
     music:"Maan Meri Jaan_64(pagalworld.com.se).mp3",
   },
-  
+   // basic songs list updated....
   };
 loadTrack(trackIndex)
 {
@@ -140,6 +140,14 @@ function populate(a)
   timelineContainer.style.setProperty("--background", Color2)
   musicInfo.style.setProperty("--background", gradient)
 }
-  
-  // basic songs list updated....
+functio reset()
+{
+  currentTime.textContent = "00.00";
+  totalTime.textContent = "00.00";
+}
+//Timeline;
+
+//If mouse is moving starts handleTimelineUpdate
+timelineContainer.addEventListner("mousemove", handleTimelineUpdate)
+ 
   
