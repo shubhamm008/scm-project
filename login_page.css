@@ -45,6 +45,7 @@ body {
     background: linear-gradient(#ff966d, #fa538d, #89379c);
     border-radius: 40px;
 }
+
 .design .pill-2 {
     top: -100px;
     left: -80px;
@@ -55,6 +56,7 @@ body {
     border-radius: 200px;
     border: 30px solid #e2c5e2;
 }
+
 .design .pill-3 {
     top: -100px;
     left: 160px;
@@ -64,6 +66,7 @@ body {
     background: linear-gradient(#ff966d, #fa538d, #89379c);
     border-radius: 70px;
 }
+
 .design .pill-4 {
     bottom: -180px;
     left: 220px;
@@ -73,3 +76,12 @@ body {
     background: linear-gradient(#ff966d, #fa538d);
     border-radius: 70px;
 }
+
+.forms .form-content .input-box{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+  }
