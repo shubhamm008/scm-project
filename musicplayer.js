@@ -149,5 +149,25 @@ function reset()
 
 //If mouse is moving starts handleTimelineUpdate
 timelineContainer.addEventListner("mousemove", handleTimelineUpdate)
+
+//If mouse is pressed down ,toggle scrubbing
+timelineContainer.addEventlistner("mousedown",toggleScrubbing)
+
+//only enter scrubbing when in timeline and cicking down
+document.addEventListner("mouseup", e->{ if(isScrubbing) toggleScrubbing(e)
+                         {)
+//if scrubbing starts handleTimelineUpdate
+  document.addEventListner("mouseup",e->{
+    if(isScrubbing) handelTimelineUpdate(e)
+                           })
+
+let isScrubbing = false
+let wasPaused
+function toggleScrubbing(e)
+{
+  const rect = timelineContainer.getBoundingClinetRect()
+   //e.x gives position of X of mouse cursor, relative to timeline.
+  //0 is so cursor doesn't go past limit. 
+  //Rect.width is furthest right position
  
   
