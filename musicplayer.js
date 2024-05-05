@@ -40,7 +40,7 @@ const music_list=[
   },
   {
     img:"https://images.unsplash.com/photo-1659425757127-ccbf96c59163?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1386&q=80",
-    name:"Rather Be"
+    name:"Rather Be",
     artist:"Clean bandit",
     music:"Clean-Bandit-Rather-Be-feat.-Jess-Glynee.mp3",
   },
@@ -140,7 +140,7 @@ function populate(a)
   timelineContainer.style.setProperty("--background", Color2)
   musicInfo.style.setProperty("--background", gradient)
 }
-functio reset()
+function reset()
 {
   currentTime.textContent = "00.00";
   totalTime.textContent = "00.00";
