@@ -169,5 +169,43 @@ function toggleScrubbing(e)
    //e.x gives position of X of mouse cursor, relative to timeline.
   //0 is so cursor doesn't go past limit. 
   //Rect.width is furthest right position
+  const percent = Math.min(Math.max(0, e.x - rect.x), rect.width)/rect.width
+  //Determines if left button is beingh clicked, if yes, enables scrubbing 
+  isScrubbing = (e.buttons & 1) === 1
+  musicContainer.classList.toggle("scrubbing", isScrubbing)
+  // if scrubbing pause audio
+  if(isScrubbing)
+  {
+    wasPaused =  audio.paused
+    audio.pause()
+  }
+  else
+  {
+    //move audio where scrubbing was stopped and then play
+    audio.currentTime = percent * audio.duration
+    if(!wasPaused) audio.play()
+  }
+  //if scrubbing starts , pulls code from handleTimelineUpdate
+  handleTimelineUpdate(e)
+}
+
+function handleTimelineUpdate(e)
+{
+  const rect = timelineContainer.getBoundingClientRect()
+   //e.x gives position of X of mouse cursor, relative to timeline.
+  //0 is so cursor doesn't go past limit. 
+  //Rect.width is furthest right position
+  const percent = Math.min(Math.max(0, e.x - rect.x), rect.width) / rect.width
+  //Math.floor((percent * audio.duration)) gives value for how far into audio
+  //Determines image according to how they were set up, 10 seconds
+  timelineContainer.style.setProperty("--preview-position", percent)
+  //Scrubbing Settings
+  if (isScrubbing) {
+  //Prevents highlighting page while scrubbing
+  e.preventDefault()
+  timelineContainer.style.setProperty("--progress-position", percent)
+  }
+}
+  
  
   
