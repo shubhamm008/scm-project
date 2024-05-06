@@ -86,10 +86,13 @@ body {
     position: relative;
     backgorund: white;
 }
+
 .login h3.title
 {
-    margib: 15px 0;
+    margin: 15px 0;
 }
+
+
 .text-input
 {
      background: #e6e6e6;
@@ -101,4 +104,11 @@ body {
     padding: 0 15px;
     margin: 5px 0;
 
+}
+
+.text-input input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
 }
