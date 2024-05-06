@@ -1,20 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-*, html, body {
+*, html, body 
+{
     margin: 0;
     padding: 0;
+
 }
 
-body {
+body
+ {
     font-family: 'Poppins', sans-serif;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to bottom right, #ff966d, #fa538d, #89379c);
+
 }
 
-.container {
+.container
+ {
     width: 50vw;
     height: 60vh;
     display: grid;
@@ -24,19 +29,25 @@ body {
     border-radius: 20px;
     background: white;
     overflow: hidden;
+
 }
 
-.design {
+.design
+ {
     grid-area: design;
     display: none;
     position: relative;
+
 }
 
-.rotate-45 {
+.rotate-45
+ {
     transform: rotate(-45deg);
+
 }
 
-.design .pill-1 {
+.design .pill-1
+ {
     bottom: 0;
     left: -40px;
     position: absolute;
@@ -44,9 +55,11 @@ body {
     height: 200px;
     background: linear-gradient(#ff966d, #fa538d, #89379c);
     border-radius: 40px;
+
 }
 
-.design .pill-2 {
+.design .pill-2
+ {
     top: -100px;
     left: -80px;
     position: absolute;
@@ -55,9 +68,11 @@ body {
     background: linear-gradient(#ff966d, #fa538d, #89379c);
     border-radius: 200px;
     border: 30px solid #e2c5e2;
+
 }
 
-.design .pill-3 {
+.design .pill-3 
+{
     top: -100px;
     left: 160px;
     position: absolute;
@@ -65,9 +80,11 @@ body {
     width: 100px;
     background: linear-gradient(#ff966d, #fa538d, #89379c);
     border-radius: 70px;
+
 }
 
-.design .pill-4 {
+.design .pill-4 
+{
     bottom: -180px;
     left: 220px;
     position: absolute;
@@ -75,9 +92,11 @@ body {
     width: 120px;
     background: linear-gradient(#ff966d, #fa538d);
     border-radius: 70px;
+
 }
 
-.login{
+.login
+{
     grid-area: login;
     display: flex;
     flex-direction: column;
@@ -85,11 +104,13 @@ body {
     justify-content: centre;
     position: relative;
     backgorund: white;
+
 }
 
 .login h3.title
 {
     margin: 15px 0;
+
 }
 
 
@@ -106,9 +127,31 @@ body {
 
 }
 
-.text-input input {
+.text-input input 
+{
     background: none;
     border: none;
     outline: none;
     width: 100%;
+
+}
+.heavy
+{
+    display: none;
+
+}
+.option_field 
+{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+.text-input input
+ {
+    background: none;
+    border: none;
+    outline: none;
+    
 }
