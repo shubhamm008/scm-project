@@ -206,6 +206,13 @@ function handleTimelineUpdate(e)
   timelineContainer.style.setProperty("--progress-position", percent)
   }
 }
+//Current Time
+audio.addEventListener("timeupdate", () => {
+  currentTime.textContent = formatDuration(audio.currentTime)
+  //Bar will move with audio progress
+  const percent = audio.currentTime / audio.duration
+  timelineContainer.style.setProperty("--progress-position", percent)
+})
   
  
   
