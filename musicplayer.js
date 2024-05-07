@@ -213,6 +213,10 @@ audio.addEventListener("timeupdate", () => {
   const percent = audio.currentTime / audio.duration
   timelineContainer.style.setProperty("--progress-position", percent)
 })
+//Duration Counter
+audio.addEventsListner("loadeddata", () => {
+  totalTime.textCOntent = formatDuration(audio.duration)
+})
   
  
   
