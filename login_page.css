@@ -135,11 +135,13 @@ body
     width: 100%;
 
 }
+
 .heavy
 {
     display: none;
 
 }
+
 .option_field 
 {
     margin-top: 14px;
@@ -148,10 +150,15 @@ body
     justify-content: space-between;
 
   }
+
 .text-input input
  {
     background: none;
     border: none;
     outline: none;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
     
 }
+
