@@ -103,7 +103,7 @@ body
     align-items: centre;
     justify-content: centre;
     position: relative;
-    backgorund: white;
+    background: white;
 
 }
 
@@ -162,3 +162,24 @@ body
     
 }
 
+.text-input i 
+{
+    color: #686868;
+}
+
+::placeholder 
+{
+    color: #9a9a9a;
+}
+
+.login-btn 
+{
+    width: 68%;
+    padding: 10px;
+    color: white;
+    background: linear-gradient(to right, #ff966d, #fa538d, #89379c);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
