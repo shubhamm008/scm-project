@@ -218,5 +218,124 @@ audio.addEventsListner("loadeddata", () => {
   totalTime.textCOntent = formatDuration(audio.duration)
 })
   
- 
+ //Makes time say :04 instead of :4
+const leadingZeroFormatter = new Intl.NumberFormat(undefined, {
+  minimumIntegerDigits: 2,
+})
+
+//Created to display duration time in full instead of seconds
+function formatDuration(time) {
+  const seconds = Math.floor(time % 60)
+  const minutes = Math.floor(time / 60) % 60
+  const hours = Math.floor(time / 3600)
+  //If no hours display minutes, if so show with minutes
+  if (hours === 0) {
+    return ${minutes}:${leadingZeroFormatter.format(seconds)}
+  } else {
+    return `${hours}:${leadingZeroFormatter.format(
+      minutes)}:${leadingZeroFormatter.format(seconds)}`
+    }
+  }
+
+
+// Shuffle Button
+shuffleBtn.addEventListener("click", () => {
+  shuffleBtn.classList.toggle("shuffle-active")
+})
+
+function shuffleTrack() {
+  isRandom ? pauseShuffle() : playShuffle();
+}
+function playShuffle() {
+  isRandom = true;
+}
+function pauseShuffle() {
+  isRandom = false;
+}
+
+
+//Play/Pause button toggle
+playPauseBtn.addEventListener("click", togglePlay)
+
+/Play/Pause/
+function togglePlay() {
+  audio.paused ? audio.play() : audio.pause();
+}
+
+//Add paused class on paused and remove on play
+audio.addEventListener("play", () => {
+  musicContainer.classList.remove("paused")
+})
+
+audio.addEventListener("pause", () => {
+  musicContainer.classList.add("paused")
+})
+
+
+/Next Track/
+function nextTrack() {
+  if (trackIndex < music_list.length - 1 && isRandom === false) {
+    trackIndex += 1;
+  } else if (trackIndex < music_list.length - 1 && isRandom === true) {
+    let random_index = Number.parseInt(Math.random() * music_list.length);
+    trackIndex = random_index;
+  } else {
+    trackIndex = 0;
+  }
+  loadTrack(trackIndex);
+  playTrack();
+}
+
+/Prev Track/
+function prevTrack() {
+  if (trackIndex > 0) {
+    trackIndex -= 1;
+  } else {
+    trackIndex = music_list.length - 1;
+  }
+  loadTrack(trackIndex);
+  playTrack();
+}
+
+/Repeat Track/
+function repeatTrack() {
+  let current_index = trackIndex;
+  loadTrack(current_index);
+  playTrack();
+}
+
+//Mute toggle
+muteBtn.addEventListener("click", toggleMute)
+
+function toggleMute() {
+  audio.muted = !audio.muted
+}
+
+//Set volume slider to corresponding value
+volumeSlider.addEventListener("input", e => {
+  audio.volume = e.target.value
+  audio.muted = e.target.value === 0 
+})
+
+
+//Change volume button according to actual volume
+audio.addEventListener("volumechange", () => {
+  volumeSlider.value = audio.volume / 1
+  let volumeLevel
+  if (audio.muted || audio.volume === 0) {
+    volumeSlider.value = 0
+    volumeLevel = "muted"
+  } else if (audio.volume >= 0.6) {
+    volumeLevel = "high"
+  } else {
+    volumeLevel = "low"
+  }
+  
+  //Volume button will correlate with volume level
+  musicContainer.dataset.volumeLevel = volumeLevel
+  
+  //Inside volume bar will move with volume level
+  volumeSlider.style.setProperty("--volume-level", volumeSlider.value)
+})
+
   
