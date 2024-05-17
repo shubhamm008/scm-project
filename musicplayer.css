@@ -93,3 +93,51 @@ body {
     font-size: 1rem;
     right: 5rem
   }
+/* Volume Buttons */
+  .volume-container {
+    left: 5%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    cursor: pointer;
+    bottom: 1.5rem;
+  }
+  
+  
+  .mute-btn{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    opacity: .85
+  }
+  
+  .mute-btn:hover {
+    opacity: 1;
+  }
+  
+  .volume-off,
+  .volume-down,
+  .volume-up {
+    color: #eeeae6;
+    display: none;
+  }
+  
+  /Display volume button according to volume state/
+  .music-container[data-volume-level="high"] .volume-up {
+    display: block;
+  }
+  
+  .music-container[data-volume-level="low"] .volume-down {
+    display: block;
+  }
+  
+  .music-container[data-volume-level="muted"] .volume-off {
+    display: block;
+  }
+  .duration-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+
