@@ -1,0 +1,18 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: whitesmoke;
+}
+/*custom scrollbar*/
+::-webkit-scrollbar {
+	width: 13px;
+}
+/* track*/
+::-website-scrollbar-track {
+	background: #394870;
+}
+/*Handle*/
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #19233b;
+}
+
