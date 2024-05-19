@@ -1,0 +1,143 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: whitesmoke;
+}
+/*custom scrollbar*/
+::-webkit-scrollbar {
+	width: 13px;
+}
+/* track*/
+::-website-scrollbar-track {
+	background: #394870;
+}
+/*Handle*/
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #19233b;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #141927;
+  }
+  
+.music-player-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .music-container {
+    position: relative;
+    height: 70%;
+    width: 40%;
+    border: 1px solid transparent;
+    background-color: rgba(81, 84, 88, 0.267);
+    padding-bottom: 30px;
+    background-size: 100%;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+.top-container {
+    display: flex;
+    height: 60%;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .bottom-container{
+    top: 100%;
+  }
+.track-art {
+    border-radius: 15px 15px 0 0;
+    margin: 0 0 0 0;
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    
+}
+}
+  .now-playing {
+    font-size: 1rem;
+  }
+  
+  .music-info{
+    text-align: center;
+    top: 45%;
+    right: 0;
+    width: 100%;
+    padding: .25rem 0 0 0;
+    opacity: 1;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: 0;
+  }
+  .music-info .track-name {
+    margin: 0;
+  }
+  
+  /* .top-c:hover .music-info,
+  .music-container:not(.paused) .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+  } */
+  
+  .track-name {
+    font-size: 1.5rem;
+  }
+  .track-artist {
+    font-size: 1rem;
+    right: 5rem
+  }
+/* Volume Buttons */
+  .volume-container {
+    left: 5%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    cursor: pointer;
+    bottom: 1.5rem;
+  }
+  
+  
+  .mute-btn{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    opacity: .85
+  }
+  
+  .mute-btn:hover {
+    opacity: 1;
+  }
+  
+  .volume-off,
+  .volume-down,
+  .volume-up {
+    color: #eeeae6;
+    display: none;
+  }
+  
+  /Display volume button according to volume state/
+  .music-container[data-volume-level="high"] .volume-up {
+    display: block;
+  }
+  
+  .music-container[data-volume-level="low"] .volume-down {
+    display: block;
+  }
+  
+  .music-container[data-volume-level="muted"] .volume-off {
+    display: block;
+  }
+  .duration-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+
